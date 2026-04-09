@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@keyframes flash-green-bg {
+  0% { background-color: rgba(52, 211, 153, 0.15); }
+  100% { background-color: transparent; }
+}
+@keyframes flash-red-bg {
+  0% { background-color: rgba(251, 113, 133, 0.15); }
+  100% { background-color: transparent; }
+}
+@keyframes flash-green-text {
+  0% { color: #34d399; }
+}
+@keyframes flash-red-text {
+  0% { color: #fb7185; }
+}
+
+.flash-green {
+  animation: flash-green-bg 0.8s ease-out;
+}
+.flash-red {
+  animation: flash-red-bg 0.8s ease-out;
+}
+.price-flash-green {
+  animation: flash-green-text 0.8s ease-out;
+}
+.price-flash-red {
+  animation: flash-red-text 0.8s ease-out;
+}
