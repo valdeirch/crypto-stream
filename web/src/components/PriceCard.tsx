@@ -34,14 +34,14 @@ export const PriceCard = React.memo(({ pair, data, history = [] }: PriceCardProp
 
   const formatPrice = (value: number) => {
     if (isBTC) {
-      return `₿ ${value.toFixed(6)}`;
+      return `${value.toFixed(6)} BTC`;
     }
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
+    return `${new Intl.NumberFormat('en-US', {
+      style: 'decimal',
       currency: 'USD',
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
-    }).format(value);
+    }).format(value)} ${pair.split('/')[1]}`;
   };
 
   // Loading / Empty State
